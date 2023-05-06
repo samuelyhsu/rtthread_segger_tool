@@ -19,13 +19,14 @@ if GetDepend(['SWO_ENABLE']):
     src += Split('''
     adapter/drv_swo.c
     ''')
-    
-path =  [cwd]
+
+path = [cwd]
 path += [cwd + '/RTT']
 
-       
+
 LOCAL_CCFLAGS = ''
 
-group = DefineGroup('SEGGER_RTT', src, depend = [''], CPPPATH = path, LOCAL_CCFLAGS = LOCAL_CCFLAGS)
+group = DefineGroup('SEGGER_RTT', src, depend=[
+                    ''], CPPPATH=path, LOCAL_CCFLAGS=LOCAL_CCFLAGS)
 
 Return('group')

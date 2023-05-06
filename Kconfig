@@ -97,4 +97,3 @@ config PKG_SEGGER_RTT_PATH
        default "latest"    if PKG_USING_SEGGER_RTT_LATEST_VERSION
 
 endif
-
